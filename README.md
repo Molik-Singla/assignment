@@ -11,15 +11,13 @@ To get started with this project, follow these steps:
 -   Clone the repository:
 
 ```
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/Molik-Singla/assignment.git
 ```
 
 -   Navigate to the project directory:
-    bash
-    Copy code
 
 ```
-cd your-repository
+cd assignment
 ```
 
 -   Install the dependencies:
