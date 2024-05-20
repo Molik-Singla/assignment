@@ -37,15 +37,15 @@ const Sidebar = () => {
 					<RxCross2 className="text-2xl" />
 				</button>
 				<section className="flex gap-3 items-center">
-					<div className="w-20 h-20 rounded-full">
+					<div className="w-16 h-16 md:w-20 md:h-20 rounded-full">
 						<img
 							className="w-full h-full rounded-full"
 							src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
 							alt=""
 						/>
 					</div>
-					<div className="flex flex-col gap-1">
-						<p className="font-bold text-xl">{personData?.name}</p>
+					<div className="flex flex-col md:gap-1">
+						<p className="font-bold text-lg md:text-xl">{personData?.name}</p>
 						<p className="font-semibold text-sm text-gray-500">
 							<span>Last Updated : </span>
 							<span>{personData?.lastUpdated}</span>
