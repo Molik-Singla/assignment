@@ -27,28 +27,30 @@ const TopicAnalysis = () => {
 	const maxValue = Math.max(...topicsData.map((data) => data.value));
 
 	return (
-		<div className="w-full h-full">
-			<div className="my-3">
-				<PrimaryText>Topic Analysis</PrimaryText>
-			</div>
+		<div className="rounded-2xl bg-white p-4 lg:p-6 lg:pt-4 flex items-center w-full justify-around max-w-lg">
+			<div className="w-full h-full">
+				<div className="my-3">
+					<PrimaryText size="l">Topic Analysis</PrimaryText>
+				</div>
 
-			<div className="flex flex-col gap-0">
-				{topicsData?.map((data) => {
-					return (
-						<div key={data?.name} className="flex justify-between gap-5 items-center">
-							<span className="min-w-[64px]">{data?.name}</span>
-							<div className="w-full">
-								<div
-									className="rounded-md h-4"
-									style={{
-										backgroundColor: generateBarColor(data.value, maxValue),
-										width: `${(data.value / maxValue) * 100}%`,
-									}}
-								></div>
+				<div className="flex flex-col gap-0">
+					{topicsData?.map((data) => {
+						return (
+							<div key={data?.name} className="flex justify-between gap-5 items-center">
+								<span className="min-w-[64px]">{data?.name}</span>
+								<div className="w-full">
+									<div
+										className="rounded-md h-4"
+										style={{
+											backgroundColor: generateBarColor(data.value, maxValue),
+											width: `${(data.value / maxValue) * 100}%`,
+										}}
+									></div>
+								</div>
 							</div>
-						</div>
-					);
-				})}
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);

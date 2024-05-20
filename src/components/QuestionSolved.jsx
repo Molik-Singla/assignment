@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import Divider from "./Divider";
 import PrimaryText from "./PrimaryText";
 import DoughnutChart from "./DoughnutChart";
@@ -16,18 +18,18 @@ const QuestionSolvedModule = () => {
 		},
 		{
 			title: "Module 2",
-			total: 32,
+			total: 83,
 			items: [
-				{ label: "Chapter 1", value: 14 },
-				{ label: "Chapter 2", value: 11 },
-				{ label: "Chapter 3", value: 7 },
+				{ label: "Chapter 1", value: 20 },
+				{ label: "Chapter 2", value: 32 },
+				{ label: "Chapter 3", value: 31 },
 			],
 		},
 	];
 
 	return (
-		<section className="w-4/5 rounded-2xl bg-white p-4 flex flex-col items-center md:px-8">
-			<PrimaryText>Question Solved</PrimaryText>
+		<section className="w-full rounded-2xl bg-white p-4 flex flex-col items-center lg:px-8  max-w-lg">
+			<PrimaryText size="l">Question Solved</PrimaryText>
 
 			<div className="w-full flex flex-col">
 				{data.map((module, index) => (
@@ -40,7 +42,7 @@ const QuestionSolvedModule = () => {
 						<div className="my-3 flex justify-center">
 							<PrimaryText>{module?.title}</PrimaryText>
 						</div>
-						<div className="flex gap-4 justify-between w-full items-center">
+						<div className="flex gap-4 w-full items-center flex-wrap justify-center">
 							<DoughnutChart data={module} />
 
 							<div className="flex flex-col gap-3">

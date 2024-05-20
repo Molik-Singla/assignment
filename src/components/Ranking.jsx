@@ -35,18 +35,18 @@ const Ranking = () => {
 	];
 
 	return (
-		<div className="rounded-2xl bg-white p-4 flex flex-col gap-4 items-center w-4/5">
-			<PrimaryText>Ranking</PrimaryText>
+		<div className="rounded-2xl bg-white p-4 flex flex-col gap-4 items-center w-full max-w-lg">
+			<PrimaryText size="l">Ranking</PrimaryText>
 
 			{rankData.map((data, ind) => {
 				return (
-					<section className="SINGLE_RANK flex flex-col items-center gap-2">
+					<section key={999999 + ind} className="SINGLE_RANK flex flex-col items-center gap-2">
 						<Divider />
 						<PrimaryText>{data?.title}</PrimaryText>
 						<div key={99999 + ind} className="flex w-full justify-evenly items-center">
 							<img className="w-2/5" src={data?.img} alt="RANK_Image" />
 							<div className="flex flex-col items-center">
-								<p className="font-bold text-4xl">{data?.rank}</p>
+								<p className="font-bold text-2xl md:text-4xl">{data?.rank}</p>
 								<p className="font-semibold text-lg text-gray-700">(min : {data?.minRank})</p>
 								<p className="mt-1 font-semibold">{data?.status}</p>
 							</div>
