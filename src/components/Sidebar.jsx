@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import Flag from "./../assets/Images/india_flag.png";
@@ -19,6 +19,16 @@ const Sidebar = () => {
 		university: "Delhi Technologies University",
 		email: "abcd@gmail.com",
 	};
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth > 1024) setIsMenuOpen(true);
+			else setIsMenuOpen(false);
+		};
+
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
 	return (
 		<section className="relative z-[99]">

@@ -136,7 +136,7 @@ const Home = () => {
 	};
 
 	return (
-		<section className="w-full h-full min-h-screen flex">
+		<section className="w-full h-screen flex">
 			<Sidebar />
 			<section className="MAIN_SECTION bg-gray-200 w-full h-full min-h-screen p-4 lg:p-8 lg:px-20 overflow-y-auto">
 				<section className="TOP flex gap-6 items-stretch flex-col lg:flex-row">

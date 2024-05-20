@@ -147,16 +147,19 @@ const HeatMap = () => {
 
 			<section className="mt-3 flex justify-between flex-col gap-y-6 md:flex-row flex-wrap">
 				<section className="MONTH HEAT_MAP flex gap-4 flex-wrap">
-					{Array.from(Object.entries(dataForHeatMap))?.map(([month, data]) => {
+					{Array.from(Object.entries(dataForHeatMap))?.map(([month, data], index) => {
 						return (
-							<section className="flex flex-col items-center">
+							<section key={999999 + index} className="flex flex-col items-center">
 								<div className="grid grid-rows-7 grid-flow-col basis-4 gap-[2px]">
-									{data.map((dayData) => {
+									{data.map((dayData, index) => {
 										let color = valueWiseColor[dayData.value];
 
 										if (dayData.value > 5) color = "bg-green-600";
 										return (
-											<span className={`group w-3 h-3 rounded-sm relative ${color}`}>
+											<span
+												key={888888 + index}
+												className={`group w-3 h-3 rounded-sm relative ${color}`}
+											>
 												<div className="hidden w-12 h-6 bg-gray-100 rounded-lg justify-center items-center text-gray-800 font-semibold text-sm group-[:hover]:flex absolute z-20 top-5">
 													{dayData?.value}
 												</div>

@@ -10,11 +10,6 @@ import award3Img from "./../assets/Images/award3.png";
 import award4Img from "./../assets/Images/award4.png";
 
 const AwardListModal = ({ isModalOpen, handleCloseModal }) => {
-	useEffect(() => {
-		if (isModalOpen) document.body.style.overflow = "hidden";
-		else document.body.style.overflow = "scroll";
-	}, [isModalOpen]);
-
 	if (!isModalOpen) return null;
 	return ReactDOM.createPortal(
 		<section className="w-full h-screen flex justify-center items-center bg-[rgba(0,0,0,0.7)] fixed top-0">
